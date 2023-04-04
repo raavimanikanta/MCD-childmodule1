@@ -5,5 +5,5 @@ resource "newrelic_alert_policy" "main_policy" {
 }
 
 output "policy_details" {
-  value=newrelic_alert_policy.main_policy.id
+  value=newrelic_alert_policy.main_policy[*].id
 }
