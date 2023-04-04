@@ -3,3 +3,7 @@ resource "newrelic_alert_policy" "main_policy" {
   name ="${lookup(var.alert_policy_name[count.index],"name")}"
   incident_preference = "PER_POLICY" # PER_POLICY is default
 }
+
+output "policy_details" {
+  value=newrelic_alert_policy.main_policy.id
+}
