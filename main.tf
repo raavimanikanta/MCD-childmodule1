@@ -4,6 +4,3 @@ resource "newrelic_alert_policy" "main_policy" {
   incident_preference = "PER_POLICY" # PER_POLICY is default
 }
 
-output "policy_details" {
-  value=newrelic_alert_policy.main_policy[*].id
-}
