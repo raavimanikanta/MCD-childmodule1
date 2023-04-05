@@ -1,3 +1,3 @@
-output "policy_details" {
-  value=newrelic_alert_policy.foo[*].id
+output "policy_details_id" {
+  value=newrelic_alert_policy.foo.id
 }
